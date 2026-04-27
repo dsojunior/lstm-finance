@@ -5,3 +5,7 @@ matplotlib
 seaborn
 scikit-learn
 tensorflow
+flask 
+flasgger 
+joblib
+prometheus-flask-exporter

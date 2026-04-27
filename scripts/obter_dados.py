@@ -37,9 +37,9 @@ def obterDados(empresa, data_inicio, data_fim, path_saida):
 
 if __name__ == "__main__":
     # Configurações
-    EMPRESA = 'NTDOY' #Escolhido indice para download (Nintendo)
-    DATA_INICIO = '2012-01-01'
-    DATA_FIM = datetime.today().strftime('%Y-%m-%d') 
+    EMPRESA = input("Digite o código da empresa na bolsa (exemplo: NTDOY, AAPL, DIS, etc): ") # No exemplo, foi utilizado NTDOY (Nintendo)
+    DATA_INICIO = input("Digite a data de início (Formato YYYY-MM-DD): ") # No exemplo, foi utilizado 2012-01-01, ano de lançamento do Wii U
+    DATA_FIM = datetime.today().strftime('%Y-%m-%d') # Por padrão, pega a data de hoje como data fim. No nosso exemplo, garante que desde 2012 pegue o comportamento de fracassos (Wii ) e sucessos (Switch)
     
     # Gerenciamento de caminhos
     path_script = os.path.dirname(os.path.abspath(__file__))

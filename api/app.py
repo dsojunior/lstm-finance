@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from flasgger import Swagger
 import numpy as np
 import joblib
@@ -13,7 +13,8 @@ app = Flask(__name__)
 
 metrics = PrometheusMetrics(app, path='/metrics')
 metrics.info('app_info', 'API Predição de Ativos', version='1.0.0')
-metrics.start_http_server(5099)
+# Porta 5099 para o Prometheus, para evitar conflito com a porta da API (5001), entretanto removendo por conta do plano gratuito do Render não suportar
+#metrics.start_http_server(5099) 
 
 app.config['SWAGGER'] = {
     'ui_params': {
@@ -60,6 +61,13 @@ def carregar_recursos(acao_empresa):
     scalers_cache[acao_empresa] = joblib.load(scaler_path)
     
     return modelos_cache[acao_empresa], scalers_cache[acao_empresa]
+
+@app.route('/', methods=['GET'])
+def health_check():
+    """
+    Rota raiz para o Health Check do Render. Redireciona para a documentação.
+    """
+    return redirect('/apidocs/')
 
 @app.route('/predict/<acao_empresa>', methods=['POST'])
 def predict(acao_empresa):
@@ -358,4 +366,4 @@ def predict_recursive(acao_empresa, dias_futuros = 5):
 
 if __name__ == '__main__':
     # Porta 5001 para evitar conflito com porta ja usada no macOS
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=False, host='0.0.0.0', port=5001)

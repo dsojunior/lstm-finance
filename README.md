@@ -122,9 +122,9 @@ O projeto está disponível em produção, conteinerizado através do **Render**
 
 ## 🎥 Vídeo de Demonstração
 
-Assista a uma explicação geral do funcionamento do projeto, bem como exemplos de chamadas realizada em produção:
+Assista a uma explicação geral do funcionamento do projeto, bem como demosntração de chamadas realizadas em produção:
 
-[LINK DO VIDEO AQUI]
+[https://www.youtube.com/watch?v=ja6G0jjo7mk](https://www.youtube.com/watch?v=ja6G0jjo7mk)
 
 ## 🗂️ Decisões Arquiteturais e Observações
 

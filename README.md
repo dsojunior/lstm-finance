@@ -11,7 +11,7 @@ O objetivo da construção é demonstrar o ciclo completo de MLOps, desde o trei
 
 - Disponibilizar um modelo de Deep Learning (LSTM) em produção através de uma API Flask.
 - Automatizar a formatação e captura de dados reais do mercado financeiro integrando com a biblioteca yfinance (Yahoo Finance).
-- Fornecer endpoints de previsão de curtíssimo prazo (no nosso cenário, predizer o próximo dia de valores) e previsões estendidas baseadas em auto-regressão (no nosso caso, previsões de at;e 30 dias).
+- Fornecer endpoints de previsão de curtíssimo prazo (no nosso cenário, predizer o próximo dia de valores) e previsões estendidas baseadas em auto-regressão (no nosso caso, previsões de até 30 dias).
 - Garantir que seja possível uma futura integração de observabilidade da aplicação com Prometheus.
 - Assegurar a portabilidade, isolamento de hardware e fácil escalabilidade  utilizando conteinerização com Docker.
 

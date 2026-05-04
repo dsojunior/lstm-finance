@@ -120,7 +120,9 @@ O projeto está disponível em produção, conteinerizado através do **Render**
 - Contrato OpenAPI: [https://lstm-finance.onrender.com/apispec_1.json](https://lstm-finance.onrender.com/apispec_1.json)
 - Monitoramento Prometheus: [https://lstm-finance.onrender.com/metrics](https://lstm-finance.onrender.com/apispec_1.json)
 
-Obs: Como o deploy foi feito no Render com o plano gratuito, há uma espécie de "hibernação" em APIs que não são muito chamadas, o que provavelmente acontecerá no momento do teste com as rotas acima. Quando a API está "hibernando", ela demora em média 40 segundos para "voltar a vida" na primeira chamada (é exibido uma tela do próprio Render como se estivesse sendo feito um deploy). Após isso, as chamadas voltam a funcionar de forma consistente na sequencia
+*Obs: Como o deploy foi feito no Render com o plano gratuito, há uma espécie de "hibernação" em APIs que não são muito chamadas, o que provavelmente acontecerá no momento do teste com as rotas acima. Quando a API está "hibernando", ela demora em média 40 segundos para "voltar a vida" na primeira chamada (é exibido uma tela do próprio Render como se estivesse sendo feito um deploy, conforme abaixo). Após isso, as chamadas voltam a funcionar de forma consistente na sequencia*
+
+![Imagem da API saindo da hibernação - Plano gratuito do Render](docs/Saida%20hibernação%20render%20plano%20gratuito.png)
 
 ## 🎥 Vídeo de Demonstração
 

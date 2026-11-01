@@ -112,15 +112,16 @@ A API espera como entrada, além da indicação do ativo para seleção do model
   }
   ```
 
-## 🌐 Link do Deploy
+## 🌐 Deploy em ambiente produtivo
 
-O projeto está disponível em produção, conteinerizado através do **Render**, no seguinte endereço:
+Atualmente, não há a exposição dessa API em uma URL pública. Entretanto, o projeto foi testado utilizando o **Render** e funcionou perfeitamente. Caso queira reproduzir, basta referenciar o arquivo *dockerfile*.
 
-- Swagger UI: [https://lstm-finance.onrender.com/apidocs/](https://lstm-finance.onrender.com/apidocs/)
-- Contrato OpenAPI: [https://lstm-finance.onrender.com/apispec_1.json](https://lstm-finance.onrender.com/apispec_1.json)
-- Monitoramento Prometheus: [https://lstm-finance.onrender.com/metrics](https://lstm-finance.onrender.com/apispec_1.json)
+As seguintes rotas ficam disponíveis após o deploy
+- Swagger UI: [URL]/apidocs/
+- Contrato OpenAPI: [URL]/apispec_1.json
+- Monitoramento Prometheus: [URL]/metrics
 
-*Obs: Como o deploy foi feito no Render com o plano gratuito, há uma espécie de "hibernação" em APIs que não são muito chamadas, o que provavelmente acontecerá no momento do teste com as rotas acima. Quando a API está "hibernando", ela demora em média 40 segundos para "voltar a vida" na primeira chamada (é exibido uma tela do próprio Render como se estivesse sendo feito um deploy, conforme abaixo). Após isso, as chamadas voltam a funcionar de forma consistente na sequencia*
+*Obs: Se for utilizado o Render com o plano gratuito, há uma espécie de "hibernação" em APIs que não são muito chamadas, o que provavelmente acontecerá no momento do teste com as rotas acima tempos depois de deploy. Quando a API está "hibernando", ela demora em média 40 segundos para "voltar a vida" na primeira chamada (é exibido uma tela do próprio Render como se estivesse sendo feito um deploy, conforme abaixo). Após isso, as chamadas voltam a funcionar de forma consistente na sequencia*
 
 ![Imagem da API saindo da hibernação - Plano gratuito do Render](docs/Saida%20hibernação%20render%20plano%20gratuito.png)
 
